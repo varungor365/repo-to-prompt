@@ -1,8 +1,10 @@
 import argparse
-import sys
 import os
+import sys
+
 import pyperclip
 from rich.console import Console
+
 from repo2prompt.packer import pack_repo
 
 console = Console()
@@ -26,7 +28,7 @@ def main():
         try:
             pyperclip.copy(prompt)
             console.print("[bold green]✅ Successfully copied to clipboard![/bold green]")
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             console.print(f"[bold red]Error copying to clipboard:[/bold red] {e}")
             sys.exit(1)
     elif args.output:

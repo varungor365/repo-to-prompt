@@ -1,7 +1,8 @@
-import pytest
 import os
 import tempfile
-from repo2prompt.packer import pack_repo, load_gitignore
+
+from repo2prompt.packer import pack_repo
+
 
 def test_pack_repo():
     with tempfile.TemporaryDirectory() as temp_dir:

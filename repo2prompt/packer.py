@@ -1,4 +1,5 @@
 import os
+
 import pathspec
 
 DEFAULT_IGNORE = [
@@ -55,7 +56,7 @@ def pack_repo(root_dir: str) -> str:
                     ext = "txt"
                     
                 output.append(f"```{ext}\n{content}\n```\n")
-            except Exception:
+            except Exception:  # noqa: BLE001, S112
                 # Skip binary files or unreadable files
                 continue
                 
