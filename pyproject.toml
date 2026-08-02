@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-to-prompt"
+version = "1.0.0"
+description = "📦 A blazingly fast CLI tool to convert any git repository into a single prompt-friendly markdown file for LLMs."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Varun Ruhella" }]
+keywords = ["ai", "llm", "git", "prompt", "context", "markdown"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pathspec>=0.11.0",
+    "rich>=13.0.0",
+    "pyperclip>=1.8.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+repo2prompt = "repo2prompt.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/varungor365/repo-to-prompt"
+Repository = "https://github.com/varungor365/repo-to-prompt"

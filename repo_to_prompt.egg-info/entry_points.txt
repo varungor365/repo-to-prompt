@@ -1,0 +1,2 @@
+[console_scripts]
+repo2prompt = repo2prompt.cli:main

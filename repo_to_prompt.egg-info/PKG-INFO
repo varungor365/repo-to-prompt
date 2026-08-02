@@ -1,0 +1,92 @@
+Metadata-Version: 2.4
+Name: repo-to-prompt
+Version: 1.0.0
+Summary: 📦 A blazingly fast CLI tool to convert any git repository into a single prompt-friendly markdown file for LLMs.
+Author: Varun Ruhella
+License: MIT
+Project-URL: Homepage, https://github.com/varungor365/repo-to-prompt
+Project-URL: Repository, https://github.com/varungor365/repo-to-prompt
+Keywords: ai,llm,git,prompt,context,markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pathspec>=0.11.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: pyperclip>=1.8.2
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Dynamic: license-file
+
+<div align="center">
+
+# 📦 repo-to-prompt
+
+**A blazingly fast CLI tool to convert any git repository into a single prompt-friendly markdown file for LLMs.**
+
+[![PyPI version](https://badge.fury.io/py/repo-to-prompt.svg)](https://badge.fury.io/py/repo-to-prompt)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<br/>
+
+</div>
+
+---
+
+## ✨ Why this exists
+
+When working with large language models (Claude, ChatGPT, etc.), you often want to give them the context of an entire repository. Manually copying and pasting files is tedious.
+
+`repo-to-prompt` instantly walks your repository, respects your `.gitignore`, filters out binary/junk files, and packs everything into a single, beautifully formatted Markdown string ready to be pasted into your favorite LLM.
+
+### Features
+- 🚀 **Lightning Fast:** Optimized directory traversal.
+- 🛡️ **Gitignore Aware:** Automatically respects your `.gitignore` and default excludes (`node_modules`, `venv`, etc.).
+- 📋 **Clipboard Ready:** Use the `-c` flag to copy the entire codebase to your clipboard instantly.
+
+---
+
+## 🚀 Quickstart
+
+### Install
+```bash
+pip install repo-to-prompt
+```
+
+### Usage
+
+Pack the current directory and print to standard output:
+```bash
+repo2prompt
+```
+
+Pack a specific directory and copy directly to clipboard (macOS/Linux/Windows):
+```bash
+repo2prompt /path/to/my/project -c
+```
+
+Save the output to a file:
+```bash
+repo2prompt . -o codebase_context.md
+```
+
+---
+
+## 🤖 AI Agent Context
+
+See [CLAUDE.md](CLAUDE.md) for contribution guidelines.
+
+---
+
+## 📄 License
+
+MIT © Varun Ruhella. See [LICENSE](LICENSE) for details.
