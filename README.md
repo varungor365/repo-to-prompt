@@ -62,3 +62,11 @@ See [CLAUDE.md](CLAUDE.md) for contribution guidelines.
 ## 📄 License
 
 MIT © Varun Ruhella. See [LICENSE](LICENSE) for details.
+
+## Who this is for
+
+Repo-to-Prompt is designed for developers who need a clean, prompt-ready Markdown snapshot of a repository for LLM-assisted code review, debugging, architecture discussion, or onboarding. It is intentionally focused on predictable repository packing rather than hidden automation.
+
+## Why star this repository
+
+Star this project if you use AI coding assistants, build repository-to-context workflows, or want a small command-line tool that makes codebase handoff easier.
